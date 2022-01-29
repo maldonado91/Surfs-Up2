@@ -5,7 +5,9 @@
 
 ### 2. Results:
 #### After refactoring the code the analysis for all stock 2017 and 2018 displayed the exact same results. 
-![All-Stocks_2017](https://github.com/maldonado91/Stock-Analysis/blob/main/Resources/All_Stocks_2017.png) ![All-Stocks_2018](https://github.com/maldonado91/Stock-Analysis/blob/main/Resources/All_Stocks_2018.png)
+![june](https://github.com/maldonado91/Surfs-Up2/blob/main/Resources/june_stats.PNG) 
+![december](https://github.com/maldonado91/Surfs-Up2/blob/main/Resources/december_stats.PNG)
+
 #### However, the run time was much different in both instances. We saw much faster times, therefore, acheiving our goals of enhancing code performance.
 #### Here is 2017
 Before ![Run_Time2017_Before](https://github.com/maldonado91/Stock-Analysis/blob/main/Resources/VBA_Challenge_2017_Before.PNG) After ![Run2017_Time_After](https://github.com/maldonado91/Stock-Analysis/blob/main/Resources/VBA_Challenge_2017.PNG)
