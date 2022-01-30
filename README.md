@@ -1,7 +1,7 @@
 # Surfs-Up
 
 ### 1. Overview of Project:
-#### After querying the hawaii.sqlite database, we wanted to zone in on the months of June and December to get an idea of the weather year round temperature look like.
+#### Using Flask, SQLALchemy, and Python, we queired the hawaii.sqlite database to gather temperature information in Oahu. In an effort to zone in on the months of June and December, we are going to query the data over the years for those two months. Once the informaion is in a list, we will throw it in a pandas DataFrame and plot the statistics.
 
 ### 2. Results:
 
