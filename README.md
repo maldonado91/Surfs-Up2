@@ -16,10 +16,11 @@
 * Overall the temperatures are similar despite the December cold season. Expectations are the temperature will reamin in the 70's no matter if we are in the summer or heading to the winter. 
  
 ### 3. Summary:
+#### The data shows we can expect fairly decent temperture year round which provides a bit of confidence in the business, however, I belive looking at the precipitation data would be nice as well since people tend to stay in on rainy days.
 #### Additional Queries:
-1. Write a function to run statistics for any month
+1. Write a function to run statistics for any month for temperature
 
-    '''
+    ```
     # Create a function to run statstics for any month.
     def month_stats(month_num):
 
@@ -41,10 +42,9 @@
 
         # Calculate and print out the summary statistics for the month temperature DataFrame.
         return df_month.describe()
-    '''
-2. Write a query to see precipitation as well.
-
-    '''
+    ```
+2. Write a function to run statistics for any month for precipitation
+    ```
     # Create a function to run statstics for any month.
     def month_stats_prcp(month_num):
 
@@ -66,7 +66,4 @@
 
         # Calculate and print out the summary statistics for the month temperature DataFrame.
         return df_month.describe()
-    '''
-#### Results for precipitation for June and December are below:
-![june_prcp](https://github.com/maldonado91/Surfs-Up2/blob/main/Resources/december_stats_prcp.PNG)![december_prcp](https://github.com/maldonado91/Surfs-Up2/blob/main/Resources/december_stats_prcp.PNG)
-
+     ```
