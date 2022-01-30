@@ -4,12 +4,14 @@
 #### After querying the hawaii.sqlite database, we wanted to zone in on the months of June and December to get an idea of thw weather year round temperature look like.
 
 ### 2. Results:
-#### After refactoring the code the analysis for all stock 2017 and 2018 displayed the exact same results. 
-#### Here is June
-![june](https://github.com/maldonado91/Surfs-Up2/blob/main/Resources/june_stats.PNG) 
 
-#### Here is December
-![december](https://github.com/maldonado91/Surfs-Up2/blob/main/Resources/december_stats.PNG)
+* June temperatures are likely to remain above 70 degrees year over year with an average of ~75 degrees and standard deviation of ~3.2.
+
+    ![june](https://github.com/maldonado91/Surfs-Up2/blob/main/Resources/june_stats.PNG) 
+
+* December also has an average temperature in the 70's but there is a small risk when looking at some of the lowest temperatures of 56 degrees.
+
+    ![december](https://github.com/maldonado91/Surfs-Up2/blob/main/Resources/december_stats.PNG)
 
 #### However, the run time was much different in both instances. We saw much faster times, therefore, acheiving our goals of enhancing code performance.
 #### Here is 2017
