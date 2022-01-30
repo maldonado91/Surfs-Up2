@@ -22,30 +22,29 @@ Before ![Run_Time2017_Before](https://github.com/maldonado91/Stock-Analysis/blob
 Before ![Run_Time2018_Before](https://github.com/maldonado91/Stock-Analysis/blob/main/Resources/VBA_Challenge_2018_Before.PNG) After ![Run_Time2018_After](https://github.com/maldonado91/Stock-Analysis/blob/main/Resources/VBA_Challenge_2018.PNG)
 
 #### Changing the code to run throught the data once was extremely useful. See below 'for loop' used in macro:
-    ''2b) Loop over all the rows in the spreadsheet.
-    For i = 2 To RowCount
-    
-        '3a) Increase volume for current ticker
-        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
-        
-        '3b) Check if the current row is the first row with the selected tickerIndex.
-         If Cells(i - 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
-         
-            tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
-            
-        End If
-        
-        '3c) check if the current row is the last row with the selected ticker
-         'If the next row’s ticker doesn’t match, increase the tickerIndex.
-         If Cells(i + 1, 1).Value <> tickers(tickerIndex) And Cells(i, 1).Value = tickers(tickerIndex) Then
-         
-            tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
-            '3d Increase the tickerIndex.
-            tickerIndex = tickerIndex + 1
-            
-         End If
-    
-    Next i
+    '''
+    # Create a function to run statstics for any month.
+    def month_stats(month_num):
+
+        '''
+        Take a number representating a month and calculate statistics
+        '''
+
+        # Write a query that filters the Measurement table to retrieve the temperatures for the month.
+        month_temps = session.query(Measurement.date, Measurement.tobs).\
+                        filter(extract('month', Measurement.date) == month_num).all()
+
+        # Convert the month temperatures to a list.
+        month_temps_list = list(month_temps)
+
+        # Create a DataFrame from the list of temperatures for the month. 
+        df_month = pd.DataFrame(month_temps_list)
+
+        df_month.rename(columns={'tobs': 'Temps'}, inplace=True)
+
+        # Calculate and print out the summary statistics for the month temperature DataFrame.
+        return df_month.describe()
+    '''
 #### Before we ran through the two separate loops to acheive the same output. See below 'for loop' used in macro:
     For i = 0 To 11
     
