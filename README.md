@@ -45,6 +45,30 @@ Before ![Run_Time2018_Before](https://github.com/maldonado91/Stock-Analysis/blob
         # Calculate and print out the summary statistics for the month temperature DataFrame.
         return df_month.describe()
     '''
+    
+    '''
+    # Create a function to run statstics for any month.
+    def month_stats_prcp(month_num):
+
+        '''
+        Take a number representating a month and calculate statistics
+        '''
+
+        # Write a query that filters the Measurement table to retrieve the temperatures for the month.
+        month_prcp = session.query(Measurement.date, Measurement.prcp).\
+                        filter(extract('month', Measurement.date) == month_num).all()
+
+        # Convert the month precipitation to a list.
+        month_prcp_list = list(month_prcp)
+
+        # Create a DataFrame from the list of temperatures for the month. 
+        df_month = pd.DataFrame(month_prcp_list)
+
+        df_month.rename(columns={'prcp': 'Prcp'}, inplace=True)
+
+        # Calculate and print out the summary statistics for the month temperature DataFrame.
+        return df_month.describe()
+    '''
 #### Before we ran through the two separate loops to acheive the same output. See below 'for loop' used in macro:
     For i = 0 To 11
     
