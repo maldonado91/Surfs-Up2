@@ -1,7 +1,7 @@
 # Surfs-Up
 
 ### 1. Overview of Project:
-#### After querying the hawaii database, we wanted to zone in on the months of June and December to get an idea of thw weather year round temperature look like.
+#### After querying the hawaii.sqlite database, we wanted to zone in on the months of June and December to get an idea of thw weather year round temperature look like.
 
 ### 2. Results:
 #### After refactoring the code the analysis for all stock 2017 and 2018 displayed the exact same results. 
